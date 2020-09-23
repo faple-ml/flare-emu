@@ -164,3 +164,21 @@ The following is an incomplete list of some of the useful utility functions prov
 
 # [Learn More](#learn)
 To learn more about **flare-emu**, please read our introductory blog at https://www.fireeye.com/blog/threat-research/2018/12/automating-objective-c-code-analysis-with-emulation.html.
+
+
+# intall on mac 
+ 
+1. brew 安装的unicorn不支持python3，需要手工编译 。
+
+```bash
+git clone https://github.com/unicorn-engine/unicorn.git
+./make.sh
+make
+cd ./bindings/python
+sudo make install3
+```
+
+2. mac的ida不支持brew安装的python3，需要手工patch
+
+https://github.com/idapython/src/blob/7a567eecf047acdbf744e3a15d213df94a9474ab/tools/patch-idapython-homebrew.sh
+
