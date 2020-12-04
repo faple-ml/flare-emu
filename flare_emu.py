@@ -347,7 +347,7 @@ class EmuHelper():
         mu.emu_start(startAddr, userData["funcEnd"], count=count)
         self.hookData = userData
         return mu
-        
+
     # call emulateRange using selected instructions in IDA Pro as start/end addresses
     def emulateSelection(self, registers=None, stack=None, instructionHook=None, callHook=None,
                      memAccessHook=None, hookData=None, skipCalls=True, hookApis=True, count=0):
